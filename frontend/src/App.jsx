@@ -1,10 +1,21 @@
 import React from 'react'
 
+import {  Route, Routes } from 'react-router-dom'
+import Home from './pages/Home'
+import Products from './pages/Products'
+import ProductDetails from './pages/ProductDetails'
+import Cart from './pages/Cart'
+
 const App = () => {
   return (
-    <div><h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1></div>
+    <Routes>
+      <Route path='/' element={<Home/>}/>
+      <Route path='/products' element={<Products/>} />
+      <Route path='/productdetails' element={<ProductDetails/>} />
+      <Route path='/cart' element={<Cart/>}/>
+        
+     
+    </Routes>
   )
 }
 
